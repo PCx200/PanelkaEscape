@@ -358,8 +358,8 @@ namespace StarterAssets
 
         private void OnDrawGizmosSelected()
         {
-            Color transparentGreen = new Color(0.0f, 1.0f, 0.0f, 0.35f);
-            Color transparentRed = new Color(1.0f, 0.0f, 0.0f, 0.35f);
+            UnityEngine.Color transparentGreen = new UnityEngine.Color(0.0f, 1.0f, 0.0f, 0.35f);
+            UnityEngine.Color transparentRed = new UnityEngine.Color(1.0f, 0.0f, 0.0f, 0.35f);
 
             if (Grounded) Gizmos.color = transparentGreen;
             else Gizmos.color = transparentRed;

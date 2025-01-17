@@ -10,7 +10,7 @@ public class ShowObjectNamesEditor : MonoBehaviour
         if (Application.isEditor && !Application.isPlaying)
         {
             GUIStyle style = new GUIStyle();
-            style.normal.textColor = Color.white;
+            style.normal.textColor = UnityEngine.Color.white;
             style.alignment = TextAnchor.MiddleCenter;
 
             foreach (var renderer in FindObjectsOfType<Renderer>())
