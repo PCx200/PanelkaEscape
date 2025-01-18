@@ -1,5 +1,65 @@
 ﻿title: Start
 ---
-<<log "Pishka">>
-
+<<declare $weakDoor = false>>
+You: Oh. My head hurts.
+You: Did I placed everybomb in the building already.
+Radio Station: Attention everybody! All the bombs are currently placed where they needs to be. 
+Radio Station: Leave the area immediately. You have 5 minutes.
 ===
+
+title: Blocked_Stairs
+---
+You: The stairs are blocked.
+You: Maybe I can find something in the rooms here.
+===
+
+title: KeyThirdFloor
+---
+You: Maybe it is for one of the rooms here.
+===
+
+title: LookingAtTheSafe
+---
+You: A safe.
+You: Maybe I can open it if I try to fix it.
+===
+
+title: WireWithoutGloves
+---
+You: I don't want to touch it with bare hands.
+===
+
+title: FindGloves
+---
+You: This could be usefull.
+===
+
+title: LockedDoor
+---
+You: It is locked.
+===
+
+title: FinalLockedDoor
+---
+You: It is locked. Maybe in these rooms I can find something usefull.
+===
+
+title: WeakDoor
+---
+<<set $weakDoor = true>>
+You: The door is weak. Maybe I can try to break it.
+-> Break it
+    //add skill check function
+-> Not now
+    <<stop>>
+===
+
+title: HammerFound
+---
+<<if $weakDoor>>
+You: I can use the hammer to break the door.
+<<else>>
+You: I can use it to burst through the front door.
+<<endif>>
+===
+
