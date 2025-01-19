@@ -12,7 +12,7 @@ public class Lever : MonoBehaviour
         if (!LeverManager.IsPuzzleSolved)
         {
             LeverManager.OnLeverClicked(LeverNumber);
-            Debug.Log(LeverNumber);
+           //Debug.Log(LeverNumber);
         }
     }
 }

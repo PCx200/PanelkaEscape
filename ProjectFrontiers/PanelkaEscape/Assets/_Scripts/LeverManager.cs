@@ -15,6 +15,9 @@ public class LeverManager : MonoBehaviour
     private int[] _solutionSequence = { 1, 2, 0 };
 
     [SerializeField] Camera _camera;
+
+    [SerializeField] GameObject obtainableObj;
+    [SerializeField] Transform keySpawn;
     void Start()
     {
         for (int i = 0; i < transform.childCount; i++)
@@ -23,7 +26,7 @@ public class LeverManager : MonoBehaviour
             lever.LeverManager = this;
             lever.LeverNumber = i;
 
-            lever.transform.rotation = Quaternion.identity;
+            lever.transform.rotation = Quaternion.Euler(0,270f,0);
         }
     }
 
@@ -38,7 +41,8 @@ public class LeverManager : MonoBehaviour
             if (_currentStep == _solutionSequence.Length)
             {
                 IsPuzzleSolved = true;
-                Debug.Log("Puzzle Solved!");
+                Instantiate(obtainableObj, keySpawn.position, keySpawn.rotation);
+                //Debug.Log("Puzzle Solved!");
                 return;
             }
         }
@@ -56,7 +60,7 @@ public class LeverManager : MonoBehaviour
             MoveLever(i, false);
         }
         _currentStep = 0;
-        Debug.Log("Sequence Reset!");
+        //Debug.Log("Sequence Reset!");
     }
 
     private void MoveLever(int leverNumber, bool isActivated)
@@ -64,8 +68,8 @@ public class LeverManager : MonoBehaviour
         var lever = transform.GetChild(leverNumber);
 
         Quaternion targetRotation = isActivated
-            ? Quaternion.Euler(0, 0, 30)
-            : Quaternion.identity; 
+            ? Quaternion.Euler(270f, 270, 0)
+            : Quaternion.Euler(0, 270, 0); 
 
         StartCoroutine(AnimateLeverMovement(lever, targetRotation));
     }
@@ -110,6 +114,7 @@ public class LeverManager : MonoBehaviour
         if (IsPuzzleSolved)
         {
             SetLeversEnabled(false);
+            _camera.enabled = false;
         }
 
     }
