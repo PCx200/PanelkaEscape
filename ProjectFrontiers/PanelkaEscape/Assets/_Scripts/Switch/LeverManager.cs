@@ -22,11 +22,11 @@ public class LeverManager : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            var lever = transform.GetChild(i).GetComponent<Lever>();
+            var lever = transform.GetChild(i).GetChild(0).GetComponent<Lever>();
             lever.LeverManager = this;
             lever.LeverNumber = i;
 
-            lever.transform.rotation = Quaternion.Euler(0,270f,0);
+            lever.transform.rotation = Quaternion.Euler(0, -90, 0);
         }
     }
 
@@ -68,8 +68,8 @@ public class LeverManager : MonoBehaviour
         var lever = transform.GetChild(leverNumber);
 
         Quaternion targetRotation = isActivated
-            ? Quaternion.Euler(270f, 270, 0)
-            : Quaternion.Euler(0, 270, 0); 
+            ? Quaternion.Euler(0, 0, -90)
+            : Quaternion.identity;
 
         StartCoroutine(AnimateLeverMovement(lever, targetRotation));
     }
@@ -93,7 +93,7 @@ public class LeverManager : MonoBehaviour
     {
         for (int i = 0; i < transform.childCount; i++)
         {
-            var lever = transform.GetChild(i).GetComponent<BoxCollider>();
+            var lever = transform.GetChild(i).GetChild(0).GetComponent<BoxCollider>();
             lever.enabled = pEnabled;
         }
     }
