@@ -35,9 +35,13 @@ public class UnpoweredStatBehaviour : MonoBehaviour
     {
         if(collision.GetComponent<PowerWireStats>())
         {
-            PowerWireStats poweredWireS = collision.GetComponent<PowerWireStats>();
-            poweredWireS.connected = false;
-            unpoweredWireS.connected = false;
+            PowerWireStats powerWireS = collision.GetComponent<PowerWireStats>();
+            if(powerWireS.objectColor == unpoweredWireS.objectColor)
+            {
+                PowerWireStats poweredWireS = collision.GetComponent<PowerWireStats>();
+                poweredWireS.connected = false;
+                unpoweredWireS.connected = false;
+            }         
         }
     }
 

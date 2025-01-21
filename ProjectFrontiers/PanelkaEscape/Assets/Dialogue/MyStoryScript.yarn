@@ -1,6 +1,7 @@
 ﻿title: Start
 ---
 <<declare $weakDoor = false>>
+//<<give_item "Player" "Gloves">>
 You: Oh. My head hurts.
 You: Did I placed everybomb in the building already.
 Radio Station: Attention everybody! All the bombs are currently placed where they needs to be. 
@@ -60,6 +61,17 @@ title: HammerFound
 You: I can use the hammer to break the door.
 <<else>>
 You: I can use it to burst through the front door.
+<<endif>>
+===
+
+title: EnableWire
+---
+<<if has_item("Player","Gloves")>>
+    <<set_enabled_in_unity "WireCamera" true>>
+<<elseif has_item("Player","gloves_disableTask")>>
+    You: I can get out of here now.
+<<else>>
+    You: I don't want to touch the wires with bare hands.
 <<endif>>
 ===
 

@@ -7,6 +7,7 @@ public class PoweredWireBehaviour : MonoBehaviour
     bool mouseDown = false;
     public PowerWireStats powerWireS;
     LineRenderer line;
+    public Camera wireCam;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,7 +57,7 @@ public class PoweredWireBehaviour : MonoBehaviour
             float mouseX = Input.mousePosition.x;
             float mouseY = Input.mousePosition.y;
 
-            gameObject.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 6));
+            gameObject.transform.position = wireCam.ScreenToWorldPoint(new Vector3(mouseX, mouseY, 6));
         }
         else
         {
