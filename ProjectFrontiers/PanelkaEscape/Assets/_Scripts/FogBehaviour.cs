@@ -8,15 +8,10 @@ public class FogBehaviour : MonoBehaviour
     private void Awake()
     {
         fog.Stop();
+
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Debug.Log("puf");
-            StartCoroutine(PlayFog());
-
-        }
     }
     public IEnumerator PlayFog()
     {
