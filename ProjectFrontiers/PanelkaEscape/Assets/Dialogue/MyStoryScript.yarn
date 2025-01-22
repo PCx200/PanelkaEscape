@@ -50,6 +50,7 @@ title: WeakDoor
 <<set $weakDoor = true>>
 You: The door is weak. Maybe I can try to break it.
 -> Break it
+    <<set_enabled_in_unity "skill_check" true>>
     //add skill check function
 -> Not now
     <<stop>>
@@ -60,14 +61,13 @@ title: HammerFound
 <<if $weakDoor>>
 You: I can use the hammer to break the door.
 <<else>>
-You: I can use it to burst through the front door.
+You: I can use it to burst through the other door.
 <<endif>>
 ===
 
 title: EnableWire
 ---
 <<if has_item("Player","Gloves")>>
-    <<wait  0.75>>
     <<set_enabled_in_unity "WireCamera" true>>
 <<elseif has_item("Player","gloves_disableTask")>>
     You: I can get out of here now.

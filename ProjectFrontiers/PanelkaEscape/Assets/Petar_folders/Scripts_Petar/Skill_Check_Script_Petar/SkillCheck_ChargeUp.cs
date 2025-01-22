@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class SkillCheck_ChargeUp : MonoBehaviour
 {
-    private float charge_value = 0;                                 //The current charge
+    public float charge_value = 0;                                 //The current charge
     private float charge_direction = 1;                             //The directoin in which the charge moves
     private bool legs_broken = false;                               //Bro :(
     
@@ -21,7 +21,12 @@ public class SkillCheck_ChargeUp : MonoBehaviour
     public Slider charge_slider;                                    //Slider for the current charge
     public Slider bottom_goal;                                      //Slider for the bottom range of the goal
     public Slider top_goal;                                         //Slider for the top range of the goal
-    public ThirdPersonController player;                            //Get the player controller
+    public ThirdPersonControllerFixed player;                       //Get the player controller
+    public Animator door_animator;                                  //Animator you are using
+    public string animation_state_to_activate;                      //I'm not explaining that
+    public AudioSource audio_self;                                  //Door breaking audip
+    public GameObject skill_check_trigger;                          //bro
+
     private void OnEnable()
     {
         if (full_slider != null)
@@ -54,8 +59,6 @@ public class SkillCheck_ChargeUp : MonoBehaviour
             goal_up_range = goal_down_range + difficulty;
             top_goal.value = goal_up_range;    
         }
-        player.MoveSpeed = 0;
-        player.SprintSpeed = 0;
     }
     private void FixedUpdate()
     {   
@@ -89,13 +92,8 @@ public class SkillCheck_ChargeUp : MonoBehaviour
             Debug.Log("Succsess");
             gameObject.SetActive(false);
             full_slider.SetActive(false);
-            player.MoveSpeed = 2f;
-            player.SprintSpeed = 5.3f;
-            if (legs_broken)
-            {
-                player.MoveSpeed = 1.5f;
-                player.SprintSpeed = 1.5f;
-            }
+            door_animator.SetBool(animation_state_to_activate,true);
+            audio_self.Play();
         }
 
         else 
@@ -115,14 +113,14 @@ public class SkillCheck_ChargeUp : MonoBehaviour
 
                 }
             }
-            else
+            else                                                    //Punish player fro skill issue
             { 
                 gameObject.SetActive(false);
                 full_slider.SetActive(false);
+                skill_check_trigger.SetActive(false);
                 player.MoveSpeed = 1.5f;
                 player.SprintSpeed = 1.5f;
                 player.JumpHeight = 0.01f;
-                legs_broken = true;
             }
          }
     }
