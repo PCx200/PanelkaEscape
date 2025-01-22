@@ -27,6 +27,8 @@ public class SkillCheck_ChargeUp : MonoBehaviour
     public AudioSource audio_self;                                  //Door breaking audip
     public GameObject skill_check_trigger;                          //bro
 
+    public GameObject cbt;
+
     private void OnEnable()
     {
         if (full_slider != null)
@@ -59,6 +61,7 @@ public class SkillCheck_ChargeUp : MonoBehaviour
             goal_up_range = goal_down_range + difficulty;
             top_goal.value = goal_up_range;    
         }
+        cbt.SetActive(true);
     }
     private void FixedUpdate()
     {   
@@ -95,6 +98,7 @@ public class SkillCheck_ChargeUp : MonoBehaviour
             door_animator.SetBool(animation_state_to_activate,true);
             audio_self.Play();
             skill_check_trigger.SetActive(false);
+            cbt.SetActive(false);
         }
 
         else 

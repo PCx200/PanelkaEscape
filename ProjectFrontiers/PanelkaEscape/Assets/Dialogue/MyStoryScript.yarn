@@ -2,65 +2,77 @@
 ---
 <<declare $weakDoor = false>>
 //<<give_item "Player" "Gloves">>
+<<autoadvance "AutoAdvance" 13>>
 You: Oh. My head hurts.
+<<autoadvance "AutoAdvance" 13>>
 You: Did I placed everybomb in the building already.
+<<autoadvance "AutoAdvance" 13>>
 Radio Station: Attention everybody! All the bombs are currently placed where they needs to be. 
+<<autoadvance "AutoAdvance" 13>>
 Radio Station: Leave the area immediately. You have 5 minutes.
 ===
 
 title: Blocked_Stairs
 ---
+<<autoadvance "AutoAdvance" 13>>
 You: The stairs are blocked.
+<<autoadvance "AutoAdvance" 13>>
 You: Maybe I can find something in the rooms here.
 ===
 
 title: KeyThirdFloor
 ---
+<<autoadvance "AutoAdvance" 13>>
 You: Maybe it is for one of the rooms here.
 ===
 
 title: LookingAtTheSafe
 ---
+<<autoadvance "AutoAdvance" 13>>
 You: A safe.
+<<autoadvance "AutoAdvance" 13>>
 You: Maybe I can open it if I try to fix it.
-===
-
-title: WireWithoutGloves
----
-You: I don't want to touch it with bare hands.
 ===
 
 title: FindGloves
 ---
+<<autoadvance "AutoAdvance" 13>>
 You: This could be usefull.
 ===
 
 title: LockedDoor
 ---
+<<autoadvance "AutoAdvance" 13>>
 You: It is locked.
 ===
 
 title: FinalLockedDoor
 ---
+<<autoadvance "AutoAdvance" 13>>
 You: It is locked. Maybe in these rooms I can find something usefull.
 ===
 
 title: WeakDoor
 ---
 <<set $weakDoor = true>>
+<<disable_controls "Player">>
 You: The door is weak. Maybe I can try to break it.
 -> Break it
     <<set_enabled_in_unity "skill_check" true>>
-    //add skill check function
+    <<wait  2>>
+    <<enable_controls "Player">>
 -> Not now
+    <<enable_controls "Player">>
     <<stop>>
 ===
 
 title: HammerFound
 ---
 <<if $weakDoor>>
+<<autoadvance "AutoAdvance" 13>>
 You: I can use the hammer to break the door.
 <<else>>
+<<autoadvance "AutoAdvance" 13>>
 You: I can use it to burst through the other door.
 <<endif>>
 ===
@@ -70,8 +82,10 @@ title: EnableWire
 <<if has_item("Player","Gloves")>>
     <<set_enabled_in_unity "WireCamera" true>>
 <<elseif has_item("Player","gloves_disableTask")>>
+    <<autoadvance "AutoAdvance" 13>>
     You: I can get out of here now.
 <<else>>
+    <<autoadvance "AutoAdvance" 13>>
     You: I don't want to touch the wires with bare hands.
 <<endif>>
 ===
