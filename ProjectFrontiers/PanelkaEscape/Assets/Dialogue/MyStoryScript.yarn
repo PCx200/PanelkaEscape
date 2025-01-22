@@ -67,6 +67,7 @@ You: I can use it to burst through the front door.
 title: EnableWire
 ---
 <<if has_item("Player","Gloves")>>
+    <<wait  0.75>>
     <<set_enabled_in_unity "WireCamera" true>>
 <<elseif has_item("Player","gloves_disableTask")>>
     You: I can get out of here now.

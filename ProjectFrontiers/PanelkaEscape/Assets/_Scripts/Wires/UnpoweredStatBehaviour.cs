@@ -22,7 +22,7 @@ public class UnpoweredStatBehaviour : MonoBehaviour
         if (collision.GetComponent<PowerWireStats>())
         {
             PowerWireStats powerWireS = collision.GetComponent<PowerWireStats>();
-            if (powerWireS.objectColor==unpoweredWireS.objectColor)
+            if (powerWireS.objectColor == unpoweredWireS.objectColor)
             {
                 powerWireS.connected = true;
                 unpoweredWireS.connected = true;
@@ -38,8 +38,7 @@ public class UnpoweredStatBehaviour : MonoBehaviour
             PowerWireStats powerWireS = collision.GetComponent<PowerWireStats>();
             if(powerWireS.objectColor == unpoweredWireS.objectColor)
             {
-                PowerWireStats poweredWireS = collision.GetComponent<PowerWireStats>();
-                poweredWireS.connected = false;
+                powerWireS.connected = false;
                 unpoweredWireS.connected = false;
             }         
         }

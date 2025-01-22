@@ -11,18 +11,19 @@ public class DisableWireCamera : MonoBehaviour
     {
         if (wireManager.finishTask)
         {
-            DisableCamera();
+            StartCoroutine(DisableCamera(1f));
             inventory.RemoveInventoryItem("Gloves");
             inventory.AddItem("gloves_disableTask");
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        DisableCamera();
+       StartCoroutine(DisableCamera(0.2f));
     }
 
-    private void DisableCamera()
+    private IEnumerator DisableCamera(float delay)
     {
+        yield return new WaitForSeconds(delay);
         wireCamera.SetActive(false);
     }
 }

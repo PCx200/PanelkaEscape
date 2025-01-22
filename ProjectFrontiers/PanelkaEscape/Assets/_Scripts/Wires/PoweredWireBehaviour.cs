@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PoweredWireBehaviour : MonoBehaviour
 {
-    bool mouseDown = false;
+    public bool mouseDown = false;
     public PowerWireStats powerWireS;
     LineRenderer line;
     public Camera wireCam;
