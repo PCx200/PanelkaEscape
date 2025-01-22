@@ -9,7 +9,7 @@ public class SkillCheck_ChargeUp : MonoBehaviour
 {
     public float charge_value = 0;                                 //The current charge
     private float charge_direction = 1;                             //The directoin in which the charge moves
-    private bool legs_broken = false;                               //Bro :(
+    //private bool legs_broken = false;                               //Bro :(
     
     public float charge_speed = 100;                                //The speed at which the charge grows                            
     public float goal_up_range = 70;                                //The range of the player challenge
@@ -79,7 +79,7 @@ public class SkillCheck_ChargeUp : MonoBehaviour
 
     private void Update()
     {
-       if (Input.GetKeyDown(KeyCode.Space))                         //Detect input from player
+       if (Input.GetKeyDown(KeyCode.E))                         //Detect input from player
         {
             Hit();
         } 
@@ -94,6 +94,7 @@ public class SkillCheck_ChargeUp : MonoBehaviour
             full_slider.SetActive(false);
             door_animator.SetBool(animation_state_to_activate,true);
             audio_self.Play();
+            skill_check_trigger.SetActive(false);
         }
 
         else 

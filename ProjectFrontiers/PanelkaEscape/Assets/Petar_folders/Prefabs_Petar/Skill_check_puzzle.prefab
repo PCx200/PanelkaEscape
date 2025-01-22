@@ -342,7 +342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1688158050208486451
 Transform:
   m_ObjectHideFlags: 0
@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6478fdc8808244244ad0dfdcbc3fefbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charge_value: 0
   charge_speed: 400
   goal_up_range: 70
   goal_down_range: 50
