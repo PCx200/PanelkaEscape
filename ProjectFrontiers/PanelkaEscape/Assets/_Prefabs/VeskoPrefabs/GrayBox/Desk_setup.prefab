@@ -92,6 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3941212777501079954}
+  - component: {fileID: 59522559831647368}
   m_Layer: 0
   m_Name: Desk_setup
   m_TagString: Untagged
@@ -115,6 +116,27 @@ Transform:
   - {fileID: 5835683892713505328}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &59522559831647368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 234365833824462636}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.2, y: 0.82, z: 2.67}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &595617477379249388
 GameObject:
   m_ObjectHideFlags: 0
