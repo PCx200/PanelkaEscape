@@ -127,6 +127,7 @@ public class SkillCheck_ChargeUp : MonoBehaviour
                 player.SprintSpeed = 1.5f;
                 player.JumpHeight = 0.01f;
             }
-         }
+            cbt.SetActive(false);
+        }
     }
 }

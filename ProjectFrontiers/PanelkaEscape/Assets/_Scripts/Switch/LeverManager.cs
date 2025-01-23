@@ -18,6 +18,8 @@ public class LeverManager : MonoBehaviour
 
     [SerializeField] GameObject obtainableObj;
     [SerializeField] Transform keySpawn;
+
+    [SerializeField] AudioSource switchAudio;
     void Start()
     {
         for (int i = 0; i < transform.childCount; i++)
@@ -32,6 +34,7 @@ public class LeverManager : MonoBehaviour
 
     public void OnLeverClicked(int leverNumber)
     {
+        switchAudio.Play();
         if (leverNumber == _solutionSequence[_currentStep])
         {
             LeverState[leverNumber] = true;

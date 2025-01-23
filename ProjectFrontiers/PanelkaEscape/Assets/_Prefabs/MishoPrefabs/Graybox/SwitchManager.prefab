@@ -50,11 +50,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LeverState: 000000
   IsPuzzleSolved: 0
-  _animationDuration: 1
+  _animationDuration: 0.25
   _camera: {fileID: 0}
   obtainableObj: {fileID: 8453070479726974580, guid: 4dfc9d7f95ea8c640aa67d4aff2b2c94,
     type: 3}
   keySpawn: {fileID: 0}
+  switchAudio: {fileID: 0}
 --- !u!65 &3313539684838617028
 BoxCollider:
   m_ObjectHideFlags: 0

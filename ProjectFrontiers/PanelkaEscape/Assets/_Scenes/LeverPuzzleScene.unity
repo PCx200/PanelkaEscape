@@ -22916,7 +22916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeToExplode:
-  - 5
+  - 90
   - 120
   - 180
   timeLeft: 0
@@ -74373,6 +74373,11 @@ PrefabInstance:
       propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5253084484033067557, guid: dc62b5feb36744742ae38b8cf6842191,
+        type: 3}
+      propertyPath: m_text
+      value: 'Press E to break it '
+      objectReference: {fileID: 0}
     - target: {fileID: 5490467369177598007, guid: dc62b5feb36744742ae38b8cf6842191,
         type: 3}
       propertyPath: dialogueRunner
@@ -80251,17 +80256,17 @@ PrefabInstance:
     - target: {fileID: 5897399493511449534, guid: 7074df04d8ac84886bcb48a7682e68bb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.67
+      value: 2.524
       objectReference: {fileID: 0}
     - target: {fileID: 5897399493511449534, guid: 7074df04d8ac84886bcb48a7682e68bb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.13
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5897399493511449534, guid: 7074df04d8ac84886bcb48a7682e68bb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.06
+      value: 1.97
       objectReference: {fileID: 0}
     - target: {fileID: 5897399493511449534, guid: 7074df04d8ac84886bcb48a7682e68bb,
         type: 3}

@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6695661124825449467}
   - component: {fileID: 93343983184038931}
   - component: {fileID: 3301522246301515879}
+  - component: {fileID: -5188430824538825878}
   m_Layer: 0
   m_Name: Gloves
   m_TagString: Untagged
@@ -151,6 +152,22 @@ MonoBehaviour:
   canBeActivated: 1
   inventory: {fileID: 0}
   item: {fileID: 11400000, guid: c7fa937fd204fc848a480d27a32fe24e, type: 2}
+--- !u!114 &-5188430824538825878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6685468531822773453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8482c7466c5b84fc8b38aa05f40aed7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canRepeat: 0
+  shouldActivateOnCollision: 0
+  canBeActivated: 1
+  audioClip: {fileID: 8300000, guid: 8bd7349f557a1fa439c12c6931dccf05, type: 3}
 --- !u!1 &9170620640836285668
 GameObject:
   m_ObjectHideFlags: 0

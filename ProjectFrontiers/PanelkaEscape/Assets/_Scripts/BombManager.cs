@@ -8,6 +8,7 @@ public class BombManager : MonoBehaviour
     [SerializeField] public float[] timeToExplode = new float[3];
     [SerializeField] public float timeLeft;
     [SerializeField] private int currentStage = 0;
+    [SerializeField] AudioSource[] audioSources = new AudioSource[2];
 
     private float startTime;
 
@@ -41,6 +42,16 @@ public class BombManager : MonoBehaviour
                 startTime = Time.time;
                 StartCoroutine(fogBehaviour[0].PlayFog());
                 StartCoroutine(fogBehaviour[1].PlayFog());
+
+                if (currentStage == 1)
+                {
+                    audioSources[0].Play();
+                }
+                if (currentStage == 2) 
+                {
+                    audioSources[1].Play();
+                }
+
             }
         }
         else
