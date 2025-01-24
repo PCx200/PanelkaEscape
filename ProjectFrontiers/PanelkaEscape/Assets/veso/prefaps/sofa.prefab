@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 3494311084859641055}
   - component: {fileID: 5254675354840029778}
   m_Layer: 0
-  m_Name: divan
+  m_Name: sofa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
