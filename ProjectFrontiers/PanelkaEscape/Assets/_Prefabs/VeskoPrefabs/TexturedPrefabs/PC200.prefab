@@ -5960,7 +5960,7 @@ GameObject:
   - component: {fileID: 7065675308430422402}
   - component: {fileID: 109461988876958946}
   m_Layer: 0
-  m_Name: Setup
+  m_Name: PC200
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

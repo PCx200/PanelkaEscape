@@ -176,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6444900666592355756}
   m_Layer: 0
-  m_Name: Shkaf
+  m_Name: Drawer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

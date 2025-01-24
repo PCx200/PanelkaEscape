@@ -176,7 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4007646895238343415}
   m_Layer: 0
-  m_Name: zalkuchena_vratnq
+  m_Name: LockedDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

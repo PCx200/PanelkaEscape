@@ -840,7 +840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4250970298204223840}
   m_Layer: 0
-  m_Name: desk_setup
+  m_Name: Desk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
