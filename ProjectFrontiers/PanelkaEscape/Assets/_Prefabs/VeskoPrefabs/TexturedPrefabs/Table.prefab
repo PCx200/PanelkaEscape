@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4067654357058562223}
   - component: {fileID: 3365074806625918957}
   m_Layer: 0
-  m_Name: masa
+  m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
