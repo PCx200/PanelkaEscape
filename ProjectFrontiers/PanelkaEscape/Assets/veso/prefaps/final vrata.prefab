@@ -1059,9 +1059,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 43200679203564235}
-  - component: {fileID: 4410086876175500864}
   m_Layer: 0
-  m_Name: final door
+  m_Name: final vrata
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1075,7 +1074,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5039957384093056515}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.022632, y: 1.0346706, z: 10.002794}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1086,27 +1085,6 @@ Transform:
   - {fileID: 2977056181554732869}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4410086876175500864
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5039957384093056515}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.5067813, y: 2.363453, z: 0.15690804}
-  m_Center: {x: 0.00059235096, y: 0.0048635006, z: -0.009295464}
 --- !u!1 &7909087066924643435
 GameObject:
   m_ObjectHideFlags: 0

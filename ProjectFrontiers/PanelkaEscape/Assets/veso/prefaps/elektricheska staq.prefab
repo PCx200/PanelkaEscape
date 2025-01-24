@@ -125,9 +125,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6973147933899737852}
-  - component: {fileID: 1797117622111021918}
   m_Layer: 0
-  m_Name: electrical door
+  m_Name: elektricheska staq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -141,7 +140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5261651314517913511}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.0226321, y: 1.0346706, z: 10.001297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -151,27 +150,6 @@ Transform:
   - {fileID: 6288184902311057468}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1797117622111021918
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261651314517913511}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.5067813, y: 2.363453, z: 0.15690804}
-  m_Center: {x: 0.00059235096, y: 0.0048635006, z: -0.009295464}
 --- !u!1 &6579171225138716377
 GameObject:
   m_ObjectHideFlags: 0

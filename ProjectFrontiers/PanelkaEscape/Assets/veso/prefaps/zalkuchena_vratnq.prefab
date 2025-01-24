@@ -175,9 +175,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4007646895238343415}
-  - component: {fileID: 9197898625124592398}
   m_Layer: 0
-  m_Name: locked_door
+  m_Name: zalkuchena_vratnq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -191,7 +190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2964222524029351258}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1, y: 1.0386014, z: 10.001297}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -203,27 +202,6 @@ Transform:
   - {fileID: 1610162385723684686}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &9197898625124592398
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2964222524029351258}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.5067813, y: 2.363453, z: 0.15690804}
-  m_Center: {x: 0.00059235096, y: 0.0048635006, z: -0.009295464}
 --- !u!1 &3966639672435733642
 GameObject:
   m_ObjectHideFlags: 0
