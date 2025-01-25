@@ -7,26 +7,27 @@ public class Hammer : MonoBehaviour
 {
    // public GameObject text_to_display;                                  //The text you want to display
     public SkillCheck_ChargeUp SkillCheck_ChargeUp;
-    public GameObject interactable_to_activate;
+    public Inventory inventory;
+    private void Update()
+    {
+        if (inventory.HasItem("Hammer"))
+        {
+            SkillCheck_ChargeUp.has_hammer = true;
+            gameObject.SetActive(false);
+        }
+    }
 
-    //private void Start()
+    //private void OnTriggerStay()                                        //Check for player input
     //{
-    //    if (text_to_display != null)                                    //Make sure the text isn't already visible
+    //    if (Input.GetKey(KeyCode.E))
     //    {
-    //        text_to_display.SetActive(false);
+    //        //gameObject.SetActive(false);
+    //        //text_to_display.SetActive(false);
+    //        interactable_to_activate.SetActive(true);
     //    }
     //}
 
-    private void OnTriggerStay()                                        //Check for player input
-    {
-        if (Input.GetKey(KeyCode.E))
-        {
-            SkillCheck_ChargeUp.has_hammer = true;
-            //gameObject.SetActive(false);
-            //text_to_display.SetActive(false);
-            interactable_to_activate.SetActive(true);
-        }
-    }
+
     //private void OnTriggerEnter(Collider other)                         //Display text while in the trigger box
     //{
     //    if (other.CompareTag("Player"))
