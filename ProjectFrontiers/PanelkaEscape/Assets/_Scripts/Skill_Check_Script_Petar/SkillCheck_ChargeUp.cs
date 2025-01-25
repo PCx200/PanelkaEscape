@@ -29,7 +29,7 @@ public class SkillCheck_ChargeUp : MonoBehaviour
 
     public GameObject cbt;
 
-    public Inventory inventory;
+
 
     private void OnEnable()
     {
@@ -87,10 +87,6 @@ public class SkillCheck_ChargeUp : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))                         //Detect input from player
         {
             Hit();
-        }
-        if (inventory.HasItem("Hammer"))
-        {
-            has_hammer = true;
         }
     }
 
