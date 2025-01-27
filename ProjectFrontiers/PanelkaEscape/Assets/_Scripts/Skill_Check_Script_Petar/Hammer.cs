@@ -8,12 +8,14 @@ public class Hammer : MonoBehaviour
    // public GameObject text_to_display;                                  //The text you want to display
     public SkillCheck_ChargeUp SkillCheck_ChargeUp;
     public Inventory inventory;
+    public GameObject trigger_to_activate;
     private void Update()
     {
         if (inventory.HasItem("Hammer"))
         {
             SkillCheck_ChargeUp.has_hammer = true;
             gameObject.SetActive(false);
+            trigger_to_activate.SetActive(true);
         }
     }
 

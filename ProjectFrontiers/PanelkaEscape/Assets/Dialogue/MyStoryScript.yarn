@@ -68,6 +68,7 @@ You: The door is weak. Maybe I can try to break it.
 
 title: HammerFound
 ---
+<<set_enabled_in_unity "skill_check_trigger" true>>
 <<if $weakDoor>>
 <<autoadvance "AutoAdvance" 13>>
 You: I can use the hammer to break the door.
@@ -91,3 +92,17 @@ title: EnableWire
 <<endif>>
 ===
 
+title: Open_Top_Door
+---
+    <<set_enabled_in_unity "door_opener" true>>
+===
+
+title: Open_midle_Door
+---
+    <<set_enabled_in_unity "door_opener_second" true>>
+===
+
+title: Open_bottom_Door
+---
+    <<set_enabled_in_unity "door_opener_bottom" true>>
+===
