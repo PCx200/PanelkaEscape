@@ -3,7 +3,142 @@ guid: 91079df9890dc244985c6f7ff3e7d555
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Apartament_2_stena
+    second: {fileID: 2100000, guid: a82d27dab0cc24e458f20c9ca7178c52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Apartament_2_stena_wrata_wytre
+    second: {fileID: 2100000, guid: 3a778f3ccc7491e45bbcf0c5edb0ea3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Apartament_3_stena_wrata_wytre
+    second: {fileID: 2100000, guid: 5d0eb709674106248bee596a250a2f78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Apartament_3_stena_wytre
+    second: {fileID: 2100000, guid: c428700570012eb43915f908ebe56107, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Banq_stena
+    second: {fileID: 2100000, guid: c69bf7a951a55f042b7817ffccce2181, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Banq_wrata
+    second: {fileID: 2100000, guid: 2f5bffaa28255a544a48a9fc5e0f665b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dupka_gore
+    second: {fileID: 2100000, guid: 9cbec4d901c07e440b949ce2cf27883e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dupka_wytre
+    second: {fileID: 2100000, guid: 0eb7bd0f4ce58b345bde403d449071bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kasi
+    second: {fileID: 2100000, guid: 77b62f490fca39449bd0abe995bed1e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: PARAPET
+    second: {fileID: 2100000, guid: ecc28e691da0fd44ba9f9c23da3ae993, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pod_apartament
+    second: {fileID: 2100000, guid: a785f83c2431ea84d877f322cc590302, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pod_banq
+    second: {fileID: 2100000, guid: 621c272d515d3cb4693fae26281aca57, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stena_koridor
+    second: {fileID: 2100000, guid: 731216200be079a43b73ac17c1097276, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steni_el_staq
+    second: {fileID: 2100000, guid: f55c968b97ddaa64c8f2269bb41f9295, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stylbi
+    second: {fileID: 2100000, guid: b44dd81f3c2c4f1408e1c6df1d6ec08f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stylbishte_osnowa
+    second: {fileID: 2100000, guid: 746bf58929cdf2b44bbb6e337618006b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: TAWAN
+    second: {fileID: 2100000, guid: 444ddf82b6035554c97c7e660f5348ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tawan_el_staq
+    second: {fileID: 2100000, guid: 1f41ab70355634142b5920682a4a85a5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wrati_koridor
+    second: {fileID: 2100000, guid: 534cc18cf651203478f53c53171b0414, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: apartament_1_steni
+    second: {fileID: 2100000, guid: 49a3997fc2c651f4994f61ff263b8f11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: apartament_1_wrati
+    second: {fileID: 2100000, guid: 76b8941211a37e249a34dc952d5c68ce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: el_staq_wrata_koridor
+    second: {fileID: 2100000, guid: 0b7ae7b648a8ed243bdfd5a5e97b6da6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: el_staq_wrati
+    second: {fileID: 2100000, guid: 737c2828fc9aa2447a9e350915f64f8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: parapet_osnowa
+    second: {fileID: 2100000, guid: 95c09d08c63db0143b716d0e537114d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pod_el_staq
+    second: {fileID: 2100000, guid: e0a360bebadb9e945ae9e65a7095aa6b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pod_koridor
+    second: {fileID: 2100000, guid: 8b64451d12ae7dc43871981927a74e33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: steni_stylbishte
+    second: {fileID: 2100000, guid: 71ed21254c47cb0439b258c5e5ea67f4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
