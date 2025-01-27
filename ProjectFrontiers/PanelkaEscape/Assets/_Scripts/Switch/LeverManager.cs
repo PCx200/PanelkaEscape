@@ -17,9 +17,10 @@ public class LeverManager : MonoBehaviour
     [SerializeField] Camera _camera;
 
     [SerializeField] GameObject obtainableObj;
-    [SerializeField] Transform keySpawn;
 
     [SerializeField] AudioSource switchAudio;
+
+    [SerializeField] Light _light;
     void Start()
     {
         for (int i = 0; i < transform.childCount; i++)
@@ -44,7 +45,7 @@ public class LeverManager : MonoBehaviour
             if (_currentStep == _solutionSequence.Length)
             {
                 IsPuzzleSolved = true;
-                Instantiate(obtainableObj, keySpawn.position, keySpawn.rotation);
+                obtainableObj.SetActive(true);
                 //Debug.Log("Puzzle Solved!");
                 return;
             }
@@ -104,12 +105,14 @@ public class LeverManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         SetLeversEnabled(true);
+        _light.enabled = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
         SetLeversEnabled(false);
         _camera.enabled = false;
+        _light.enabled = false;
     }
     private void OnTriggerStay(Collider other)
     {
@@ -118,6 +121,7 @@ public class LeverManager : MonoBehaviour
         {
             SetLeversEnabled(false);
             _camera.enabled = false;
+           
         }
 
     }

@@ -10,6 +10,7 @@ public class WireManager : MonoBehaviour
     public UnpoweredWireStat yellow;
 
     public bool finishTask = false;
+    [SerializeField] GameObject key;
     public Animator animator;
     public string animation_to_trigger;
 
@@ -22,7 +23,11 @@ public class WireManager : MonoBehaviour
         }
 
         if (finishTask)
-        { 
+        {
+            if (key != null)
+            {
+                key.SetActive(true);
+            }
             animator.SetBool(animation_to_trigger, true);
         }
     }
