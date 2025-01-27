@@ -81,6 +81,7 @@ title: EnableWire
 ---
 <<if has_item("Player","Gloves")>>
     <<set_enabled_in_unity "WireCamera" true>>
+    <<set_enabled_in_unity "BagButton" false>>
 <<elseif has_item("Player","gloves_disableTask")>>
     <<autoadvance "AutoAdvance" 13>>
     You: I can get out of here now.

@@ -14,6 +14,8 @@ public class BombManager : MonoBehaviour
 
     [SerializeField] FogBehaviour[] fogBehaviour;
 
+    public FloorCheker floorCheker;
+
     private void Start()
     {
         fogBehaviour = FindObjectsOfType<FogBehaviour>();
@@ -27,6 +29,26 @@ public class BombManager : MonoBehaviour
     private void Update()
     {
         BombExplosion();
+        StageChecker();
+    }
+
+    private void StageChecker()
+    {
+        if (currentStage == 1 && floorCheker.stageChecker[0] == 0)
+        {
+            //set UI for ded screen
+            Debug.Log("You died");
+        }
+        if (currentStage == 2 && floorCheker.stageChecker[1] == 1)
+        {
+            //set UI for ded screen
+            Debug.Log("You died");
+
+        }
+        if (currentStage == 2)
+        {
+            //set active some rocks
+        }
     }
 
     private void BombExplosion()
@@ -59,4 +81,6 @@ public class BombManager : MonoBehaviour
             timeLeft = 0;
         }
     }
+
+    
 }
