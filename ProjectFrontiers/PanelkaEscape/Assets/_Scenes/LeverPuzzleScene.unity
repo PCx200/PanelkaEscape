@@ -2779,6 +2779,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2168246748232818735, guid: 7e406cef370674e479f0d988e1f8ad6b,
+        type: 3}
+      propertyPath: dialogueRunner
+      value: 
+      objectReference: {fileID: 1456968094}
     - target: {fileID: 2589615951669324515, guid: 7e406cef370674e479f0d988e1f8ad6b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2864,6 +2869,11 @@ PrefabInstance:
       propertyPath: inventory
       value: 
       objectReference: {fileID: 1952320076}
+    - target: {fileID: 4890403992983474060, guid: 7e406cef370674e479f0d988e1f8ad6b,
+        type: 3}
+      propertyPath: trigger_to_activate
+      value: 
+      objectReference: {fileID: 1456968084}
     - target: {fileID: 5282336573324415694, guid: 7e406cef370674e479f0d988e1f8ad6b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2951,6 +2961,11 @@ PrefabInstance:
       objectReference: {fileID: 1952320077}
     - target: {fileID: 7381111453230754185, guid: 7e406cef370674e479f0d988e1f8ad6b,
         type: 3}
+      propertyPath: yarn_trigger
+      value: 
+      objectReference: {fileID: 1456968084}
+    - target: {fileID: 7381111453230754185, guid: 7e406cef370674e479f0d988e1f8ad6b,
+        type: 3}
       propertyPath: skill_check_trigger
       value: 
       objectReference: {fileID: 1167105729}
@@ -2964,6 +2979,16 @@ PrefabInstance:
       propertyPath: key
       value: 
       objectReference: {fileID: 1671776016}
+    - target: {fileID: 8433702632332162784, guid: 7e406cef370674e479f0d988e1f8ad6b,
+        type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1952320076}
+    - target: {fileID: 8433702632332162784, guid: 7e406cef370674e479f0d988e1f8ad6b,
+        type: 3}
+      propertyPath: trigger_to_activate
+      value: 
+      objectReference: {fileID: 584748719}
     - target: {fileID: 8457226488534249826, guid: 7e406cef370674e479f0d988e1f8ad6b,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -3483,6 +3508,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3202733133312221180, guid: 42786792db9584cf7ab336e93cea908b,
     type: 3}
   m_PrefabInstance: {fileID: 1758704651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &584748719 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6671474198943804937, guid: 7e406cef370674e479f0d988e1f8ad6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 479628970}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &585701250
 GameObject:
