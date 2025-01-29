@@ -1,22 +1,27 @@
 ﻿title: Start
 ---
+
 <<declare $weakDoor = false>>
+<<declare $quest = "Find a way out">>
 //<<give_item "Player" "Gloves">>
-<<autoadvance "AutoAdvance" 13>>
+<<disable_controls "Player">>
 You: Oh. My head hurts.
-<<autoadvance "AutoAdvance" 13>>
-You: Did I placed everybomb in the building already.
-<<autoadvance "AutoAdvance" 13>>
-Radio Station: Attention everybody! All the bombs are currently placed where they needs to be. 
-<<autoadvance "AutoAdvance" 13>>
-Radio Station: Leave the area immediately. You have 5 minutes.
+You: Last I remember I was with the demolition crew.
+You: We had to tear this building to the ground.
+You: Did I place every bomb in the building already. My boss will hang me for this!
+Radio Station: Attention everybody! All the bombs are currently placed where they need to be.
+Radio Station: Evacuate the area immediately. 5 MINUTES BEFORE DETONATION!!!
+//<<set_enabled_in_unity "skill_check" true>>
+<<enable_controls "Player">>
 ===
+
+
+
 
 title: Blocked_Stairs
 ---
-<<autoadvance "AutoAdvance" 13>>
+
 You: The stairs are blocked.
-<<autoadvance "AutoAdvance" 13>>
 You: Maybe I can find something in the rooms here.
 ===
 
@@ -28,9 +33,8 @@ You: Maybe it is for one of the rooms here.
 
 title: LookingAtTheSafe
 ---
-<<autoadvance "AutoAdvance" 13>>
+<<set $quest = "Open the safe">>
 You: A safe.
-<<autoadvance "AutoAdvance" 13>>
 You: Maybe I can open it if I try to fix it.
 ===
 
@@ -38,6 +42,7 @@ title: FindGloves
 ---
 <<autoadvance "AutoAdvance" 13>>
 You: This could be usefull.
+<<set $quest = "Open the safe">>
 ===
 
 title: LockedDoor
@@ -55,25 +60,29 @@ You: It is locked. Maybe in these rooms I can find something usefull.
 title: WeakDoor
 ---
 <<set $weakDoor = true>>
-<<disable_controls "Player">>
-You: The door is weak. Maybe I can try to break it.
+
+You: The door is weak. Maybe I can try to break it. 
+You: I remember I left a sledge hammer in the next apartment.
 -> Break it
     <<set_enabled_in_unity "skill_check" true>>
     <<wait  2>>
-    <<enable_controls "Player">>
+    <<set $quest= "Find the sledge hammer">>
 -> Not now
-    <<enable_controls "Player">>
+    <<set $quest= "Find the sledge hammer">>
     <<stop>>
 ===
 
 title: HammerFound
 ---
+<<set_enabled_in_unity "skill_check_trigger" true>>
 <<if $weakDoor>>
 <<autoadvance "AutoAdvance" 13>>
 You: I can use the hammer to break the door.
+<<set $quest = "Break the door">>
 <<else>>
 <<autoadvance "AutoAdvance" 13>>
 You: I can use it to burst through the other door.
+<<set $quest = "Break the door">>
 <<endif>>
 ===
 
@@ -81,12 +90,42 @@ title: EnableWire
 ---
 <<if has_item("Player","Gloves")>>
     <<set_enabled_in_unity "WireCamera" true>>
+    <<set_enabled_in_unity "BagButton" false>>
 <<elseif has_item("Player","gloves_disableTask")>>
     <<autoadvance "AutoAdvance" 13>>
     You: I can get out of here now.
 <<else>>
+    <<set $quest ="Acquire hand protection">>
     <<autoadvance "AutoAdvance" 13>>
     You: I don't want to touch the wires with bare hands.
 <<endif>>
 ===
 
+title: Open_Top_Door
+---
+<<if has_item("Player","Key")>>
+    <<set_enabled_in_unity "door_opener" true>>
+    <<set_enabled_in_unity "AudioClipDoor" true>>
+    <<take_item "Player" "Key">>
+<<else>>
+    <<set $quest = "Find a key">>
+    <<jump LockedDoor>>
+    <<endif>>
+===
+
+title: Open_midle_Door
+---
+    <<if has_item("Player","Key_2")>>
+    <<set_enabled_in_unity "door_opener_second" true>>
+    <<set_enabled_in_unity "AudioClipDoor2" true>>
+    <<take_item "Player" "Key_2">>
+    <<set $quest = "Find a way out">>
+    <<else>>
+    <<jump LockedDoor>>
+    <<endif>>
+===
+
+title: Open_bottom_Door
+---
+    <<set_enabled_in_unity "door_opener_bottom" true>>
+===

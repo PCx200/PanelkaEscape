@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class SkillCheck_ChargeUp : MonoBehaviour
 {
-    public float charge_value = 0;                                 //The current charge
+    private float charge_value = 0;                                 //The current charge
     private float charge_direction = 1;                             //The directoin in which the charge moves
     //private bool legs_broken = false;                               //Bro :(
     
@@ -26,8 +26,10 @@ public class SkillCheck_ChargeUp : MonoBehaviour
     public string animation_state_to_activate;                      //I'm not explaining that
     public AudioSource audio_self;                                  //Door breaking audip
     public GameObject skill_check_trigger;                          //bro
-
+    public GameObject yarn_trigger;
     public GameObject cbt;
+
+
 
     private void OnEnable()
     {
@@ -82,10 +84,10 @@ public class SkillCheck_ChargeUp : MonoBehaviour
 
     private void Update()
     {
-       if (Input.GetKeyDown(KeyCode.E))                         //Detect input from player
+        if (Input.GetKeyDown(KeyCode.E))                         //Detect input from player
         {
             Hit();
-        } 
+        }
     }
 
     void Hit()                                                      //Checking if the player has a skill issue
@@ -99,6 +101,7 @@ public class SkillCheck_ChargeUp : MonoBehaviour
             audio_self.Play();
             skill_check_trigger.SetActive(false);
             cbt.SetActive(false);
+            yarn_trigger.SetActive(false);
         }
 
         else 

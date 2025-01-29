@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4025213837002884009}
   - component: {fileID: 8699641581872016641}
-  - component: {fileID: 1747837561310490351}
+  - component: {fileID: 6800914328942407789}
+  - component: {fileID: 6700682195051091715}
+  - component: {fileID: 4026277190792462796}
   m_Layer: 0
   m_Name: Hammer
   m_TagString: Untagged
@@ -53,7 +55,7 @@ MonoBehaviour:
   canBeActivated: 1
   inventory: {fileID: 0}
   item: {fileID: 11400000, guid: 877a5f23a0dc601469b2a3803d17a8f3, type: 2}
---- !u!114 &1747837561310490351
+--- !u!114 &6800914328942407789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -62,12 +64,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 2147961154432122241}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaadf43f385154733bd2ae1d7998c36f, type: 3}
+  m_Script: {fileID: 11500000, guid: 8482c7466c5b84fc8b38aa05f40aed7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   canRepeat: 0
   shouldActivateOnCollision: 0
   canBeActivated: 1
+  audioClip: {fileID: 8300000, guid: eb4d535974cf87b4bb137a19bd6efe56, type: 3}
+--- !u!114 &6700682195051091715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147961154432122241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479083dec54244b869cf0172a81a6508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canRepeat: 0
+  shouldActivateOnCollision: 0
+  canBeActivated: 1
+  dialogueRunner: {fileID: 0}
+  dialogueNodeName: HammerFound
+--- !u!114 &4026277190792462796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2147961154432122241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c133c1ffbd304c74e8bcee57a642bb1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SkillCheck_ChargeUp: {fileID: 0}
+  inventory: {fileID: 0}
+  trigger_to_activate: {fileID: 0}
 --- !u!1 &3014329067854406348
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,13 +130,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3014329067854406348}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0009350232, y: 0.004576239, z: -0.11913778}
+  m_LocalRotation: {x: 0.5485202, y: -0.17281128, z: 0.44623506, w: 0.68566483}
+  m_LocalPosition: {x: -0.035880387, y: 0.1254037, z: -0.030536652}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4025213837002884009}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 65.017, y: 36.725, z: 90}
 --- !u!33 &1848366564066261154
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -200,13 +235,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7357581985214658338}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0000000035089138, y: 4.563566e-10, z: 0.5982704}
+  m_LocalRotation: {x: 0.5485202, y: -0.17281128, z: 0.44623506, w: 0.68566483}
+  m_LocalPosition: {x: 0.14665669, y: -0.52441484, z: 0.21257782}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4025213837002884009}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 65.017, y: 36.725, z: 90}
 --- !u!33 &7643348963960744549
 MeshFilter:
   m_ObjectHideFlags: 0

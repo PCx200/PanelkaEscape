@@ -26,7 +26,7 @@ public class UnpoweredStatBehaviour : MonoBehaviour
             {
                 powerWireS.connected = true;
                 unpoweredWireS.connected = true;
-                powerWireS.connectedPosition = gameObject.transform.position;
+                powerWireS.connectedPosition = gameObject.transform.position - new Vector3(0.75f, 0f, 0f);
             }
         }
     }

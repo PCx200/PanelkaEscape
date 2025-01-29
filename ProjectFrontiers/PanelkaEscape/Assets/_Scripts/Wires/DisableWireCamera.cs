@@ -5,6 +5,7 @@ using UnityEngine;
 public class DisableWireCamera : MonoBehaviour
 {
     public GameObject wireCamera;
+    public GameObject bagButton;
     public WireManager wireManager;
     public Inventory inventory;
     private void Update()
@@ -13,7 +14,6 @@ public class DisableWireCamera : MonoBehaviour
         {
             StartCoroutine(DisableCamera(1f));
             inventory.RemoveInventoryItem("Gloves");
-            inventory.AddItem("gloves_disableTask");
         }
     }
     private void OnTriggerExit(Collider other)
@@ -25,5 +25,6 @@ public class DisableWireCamera : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         wireCamera.SetActive(false);
+        bagButton.SetActive(true);
     }
 }
