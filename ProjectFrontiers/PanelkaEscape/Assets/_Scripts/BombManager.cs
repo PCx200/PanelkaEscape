@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.WSA;
+using Yarn.Unity;
 
 public class BombManager : MonoBehaviour
 {
@@ -15,6 +16,12 @@ public class BombManager : MonoBehaviour
     [SerializeField] FogBehaviour[] fogBehaviour;
 
     public FloorCheker floorCheker;
+
+    public GameObject deathScreen;
+
+    public GameObject questCanvas;
+
+    public GameObject player;
 
     private void Start()
     {
@@ -36,19 +43,26 @@ public class BombManager : MonoBehaviour
     {
         if (currentStage == 1 && floorCheker.stageChecker[0] == 0)
         {
-            //set UI for ded screen
-            Debug.Log("You died");
+            Die();
+            //Debug.Log("You died");
         }
         if (currentStage == 2 && floorCheker.stageChecker[1] == 1)
         {
-            //set UI for ded screen
-            Debug.Log("You died");
+            Die();
+            //Debug.Log("You died");
 
         }
         if (currentStage == 2)
         {
             //set active some rocks
         }
+    }
+
+    private void Die()
+    {
+        deathScreen.SetActive(true);
+        questCanvas.SetActive(false);
+        player.SetActive(false);
     }
 
     private void BombExplosion()

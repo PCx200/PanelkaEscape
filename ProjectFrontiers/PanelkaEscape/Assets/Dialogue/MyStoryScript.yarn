@@ -60,16 +60,14 @@ You: It is locked. Maybe in these rooms I can find something usefull.
 title: WeakDoor
 ---
 <<set $weakDoor = true>>
-<<disable_controls "Player">>
+
 You: The door is weak. Maybe I can try to break it. 
 You: I remember I left a sledge hammer in the next apartment.
 -> Break it
     <<set_enabled_in_unity "skill_check" true>>
     <<wait  2>>
-    <<enable_controls "Player">>
     <<set $quest= "Find the sledge hammer">>
 -> Not now
-    <<enable_controls "Player">>
     <<set $quest= "Find the sledge hammer">>
     <<stop>>
 ===
