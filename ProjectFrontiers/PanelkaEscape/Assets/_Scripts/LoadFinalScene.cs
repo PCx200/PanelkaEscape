@@ -19,7 +19,7 @@ public class LoadFinalScene : MonoBehaviour
 
     IEnumerator FinalSceneLoad()
     { 
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.7f);
         SceneManager.LoadScene(_sceneName);
     }
 }

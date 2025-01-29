@@ -11,6 +11,8 @@ You: We had to tear this building to the ground.
 You: Did I place every bomb in the building already. My boss will hang me for this!
 Radio Station: Attention everybody! All the bombs are currently placed where they need to be.
 Radio Station: Evacuate the area immediately. 5 MINUTES BEFORE DETONATION!!!
+Tip: For inventory click the bag.
+Tip: To look around hold the right mouse button.
 <<set_enabled_in_unity "BombComponents" true>>
 <<enable_controls "Player">>
 ===
