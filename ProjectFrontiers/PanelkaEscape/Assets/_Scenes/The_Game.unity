@@ -8982,7 +8982,7 @@ MonoBehaviour:
   canBeActivated: 1
   inventory: {fileID: 1952320076}
   item: {fileID: 11400000, guid: 6223ab765fe4d224180a90ec832a9092, type: 2}
-  shouldRemoveFromInventory: 1
+  shouldRemoveFromInventory: 0
   invertItemCheck: 0
 --- !u!114 &1600266931
 MonoBehaviour:
@@ -12320,6 +12320,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de99310b7dc304d4bbbb9e635a3542de, type: 3}
+--- !u!1 &1870400419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1870400421}
+  - component: {fileID: 1870400420}
+  m_Layer: 0
+  m_Name: FinalSceneLoader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1870400420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870400419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1faeeae83b3cb1f4084928f99cfdea91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sceneName: EndScene
+--- !u!4 &1870400421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870400419}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 16.382, y: 1.2, z: 43.277}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1873896426
 GameObject:
   m_ObjectHideFlags: 0
@@ -15898,7 +15943,7 @@ PrefabInstance:
     - target: {fileID: 5897399493511449534, guid: 7074df04d8ac84886bcb48a7682e68bb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.147
+      value: 8.14
       objectReference: {fileID: 0}
     - target: {fileID: 5897399493511449534, guid: 7074df04d8ac84886bcb48a7682e68bb,
         type: 3}
@@ -16028,6 +16073,7 @@ SceneRoots:
   - {fileID: 1910768347}
   - {fileID: 1289382763}
   - {fileID: 1689445341}
+  - {fileID: 1870400421}
   - {fileID: 1571574679}
   - {fileID: 913017487}
   - {fileID: 1275785542}

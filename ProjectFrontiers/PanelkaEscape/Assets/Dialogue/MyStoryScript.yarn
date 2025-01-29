@@ -129,6 +129,10 @@ title: Open_bottom_Door
 ---
     <<set $quest = "Find the key for the exit door">>
     <<set_enabled_in_unity "door_opener_bottom" true>>
+
+    <<if has_item("Player","Key_3")>>
+    <<set_enabled_in_unity "FinalSceneLoader" true>>
+    <<endif>>
 ===
 
 title: FinalKey
