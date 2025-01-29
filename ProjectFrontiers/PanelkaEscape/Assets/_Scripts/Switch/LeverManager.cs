@@ -25,6 +25,8 @@ public class LeverManager : MonoBehaviour
     [SerializeField] Animator _doorAnimator;
 
     [SerializeField] Camera _panelCamera;
+
+    [SerializeField] AudioSource _panelAudio;
     void Start()
     {
         for (int i = 0; i < transform.childCount; i++)
@@ -134,6 +136,7 @@ public class LeverManager : MonoBehaviour
 
     IEnumerator EnablePanelCamera()
     {
+        _panelAudio.Play();
         _panelCamera.enabled = true;
         yield return new WaitForSeconds(2f);
         _panelCamera.enabled = false;   

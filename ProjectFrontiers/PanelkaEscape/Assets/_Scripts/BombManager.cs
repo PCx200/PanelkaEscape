@@ -23,8 +23,10 @@ public class BombManager : MonoBehaviour
 
     public GameObject player;
 
+    public GameObject rock;
     private void Start()
     {
+        audioSources[0].Play();
         fogBehaviour = FindObjectsOfType<FogBehaviour>();
         if (timeToExplode.Length > 0)
         {
@@ -54,6 +56,7 @@ public class BombManager : MonoBehaviour
         }
         if (currentStage == 2)
         {
+            rock.SetActive(true);
             //set active some rocks
         }
     }

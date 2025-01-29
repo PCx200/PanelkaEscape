@@ -11,7 +11,7 @@ You: We had to tear this building to the ground.
 You: Did I place every bomb in the building already. My boss will hang me for this!
 Radio Station: Attention everybody! All the bombs are currently placed where they need to be.
 Radio Station: Evacuate the area immediately. 5 MINUTES BEFORE DETONATION!!!
-//<<set_enabled_in_unity "skill_check" true>>
+<<set_enabled_in_unity "BombComponents" true>>
 <<enable_controls "Player">>
 ===
 
@@ -60,7 +60,6 @@ You: It is locked. Maybe in these rooms I can find something usefull.
 title: WeakDoor
 ---
 <<set $weakDoor = true>>
-
 You: The door is weak. Maybe I can try to break it. 
 You: I remember I left a sledge hammer in the next apartment.
 -> Break it
@@ -127,5 +126,6 @@ title: Open_midle_Door
 
 title: Open_bottom_Door
 ---
+    <<set $quest = "Find a way out">>
     <<set_enabled_in_unity "door_opener_bottom" true>>
 ===
