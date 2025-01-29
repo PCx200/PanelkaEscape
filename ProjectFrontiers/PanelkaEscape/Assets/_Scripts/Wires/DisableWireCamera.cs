@@ -14,7 +14,6 @@ public class DisableWireCamera : MonoBehaviour
         {
             StartCoroutine(DisableCamera(1f));
             inventory.RemoveInventoryItem("Gloves");
-            inventory.AddItem("gloves_disableTask");
         }
     }
     private void OnTriggerExit(Collider other)
