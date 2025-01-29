@@ -21,6 +21,10 @@ public class LeverManager : MonoBehaviour
     [SerializeField] AudioSource switchAudio;
 
     [SerializeField] Light _light;
+
+    [SerializeField] Animator _doorAnimator;
+
+    [SerializeField] Camera _panelCamera;
     void Start()
     {
         for (int i = 0; i < transform.childCount; i++)
@@ -46,6 +50,8 @@ public class LeverManager : MonoBehaviour
             {
                 IsPuzzleSolved = true;
                 obtainableObj.SetActive(true);
+                _doorAnimator.SetBool("wire_puzzle_done", true);
+                StartCoroutine(EnablePanelCamera());
                 //Debug.Log("Puzzle Solved!");
                 return;
             }
@@ -124,5 +130,12 @@ public class LeverManager : MonoBehaviour
            
         }
 
+    }
+
+    IEnumerator EnablePanelCamera()
+    {
+        _panelCamera.enabled = true;
+        yield return new WaitForSeconds(2f);
+        _panelCamera.enabled = false;   
     }
 }
