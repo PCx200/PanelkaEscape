@@ -14,10 +14,6 @@ Radio Station: Evacuate the area immediately. 5 MINUTES BEFORE DETONATION!!!
 <<set_enabled_in_unity "BombComponents" true>>
 <<enable_controls "Player">>
 ===
-
-
-
-
 title: Blocked_Stairs
 ---
 
@@ -27,6 +23,7 @@ You: Maybe I can find something in the rooms here.
 
 title: KeyThirdFloor
 ---
+<<set $quest = "Open the bathroom door">>
 <<autoadvance "AutoAdvance" 13>>
 You: Maybe it is for one of the rooms here.
 ===
@@ -65,7 +62,11 @@ You: I remember I left a sledge hammer in the next apartment.
 -> Break it
     <<set_enabled_in_unity "skill_check" true>>
     <<wait  2>>
+    <<if has_item("Player", "Hammer")>>
+    <<set $quest = "Find the key for the final door">>
+    <<else>>
     <<set $quest= "Find the sledge hammer">>
+    <<endif>>
 -> Not now
     <<set $quest= "Find the sledge hammer">>
     <<stop>>
@@ -126,6 +127,11 @@ title: Open_midle_Door
 
 title: Open_bottom_Door
 ---
-    <<set $quest = "Find a way out">>
+    <<set $quest = "Find the key for the exit door">>
     <<set_enabled_in_unity "door_opener_bottom" true>>
+===
+
+title: FinalKey
+---
+<<set $quest = "Escape">>
 ===

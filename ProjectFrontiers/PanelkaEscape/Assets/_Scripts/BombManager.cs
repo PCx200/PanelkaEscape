@@ -45,12 +45,12 @@ public class BombManager : MonoBehaviour
     {
         if (currentStage == 1 && floorCheker.stageChecker[0] == 0)
         {
-            Die();
+            StartCoroutine(Die()); 
             //Debug.Log("You died");
         }
         if (currentStage == 2 && floorCheker.stageChecker[1] == 1)
         {
-            Die();
+            StartCoroutine(Die());
             //Debug.Log("You died");
 
         }
@@ -59,10 +59,15 @@ public class BombManager : MonoBehaviour
             rock.SetActive(true);
             //set active some rocks
         }
+        if(currentStage == 3)
+        {
+            StartCoroutine(Die());
+        }
     }
 
-    private void Die()
+    private IEnumerator Die()
     {
+        yield return new WaitForSeconds(1);
         deathScreen.SetActive(true);
         questCanvas.SetActive(false);
         player.SetActive(false);

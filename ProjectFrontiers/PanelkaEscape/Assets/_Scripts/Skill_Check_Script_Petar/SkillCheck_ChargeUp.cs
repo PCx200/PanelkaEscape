@@ -26,7 +26,8 @@ public class SkillCheck_ChargeUp : MonoBehaviour
     public string animation_state_to_activate;                      //I'm not explaining that
     public AudioSource audio_self;                                  //Door breaking audip
     public GameObject skill_check_trigger;                          //bro
-    public GameObject yarn_trigger;
+    public GameObject inventory;
+    public GameObject quest;
     public GameObject cbt;
 
 
@@ -64,6 +65,8 @@ public class SkillCheck_ChargeUp : MonoBehaviour
             top_goal.value = goal_up_range;    
         }
         cbt.SetActive(true);
+        inventory.SetActive(false);
+        quest.SetActive(false);
     }
     private void FixedUpdate()
     {   
@@ -101,7 +104,8 @@ public class SkillCheck_ChargeUp : MonoBehaviour
             audio_self.Play();
             skill_check_trigger.SetActive(false);
             cbt.SetActive(false);
-            yarn_trigger.SetActive(false);
+            inventory.SetActive(true);
+            quest.SetActive(true);
         }
 
         else 
@@ -131,6 +135,8 @@ public class SkillCheck_ChargeUp : MonoBehaviour
                 player.JumpHeight = 0.01f;
             }
             cbt.SetActive(false);
+            //inventory.SetActive(true);
+            //quest.SetActive(true);
         }
     }
 }
